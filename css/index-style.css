@@ -1,0 +1,427 @@
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Baloo Tammudu 2';
+}
+.contenedor{
+    width: 100%;
+    text-align: center;
+    /*GRID*/
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 0;
+}
+.contenedor > div{
+    display: block;
+    padding: 20px;
+    color: white;
+    
+}
+.tiempo{
+    width: 100%;
+}
+.temp{
+    color: white;
+    display: inline-flex;
+    font-size: 56px;
+    width: 280px;
+    height: 250px;
+}
+.lineaDefault{
+    background: linear-gradient(90deg, rgba(1,147,124,1) 0%, rgba(128,128,128,1) 1%);
+    border-radius: 10px;
+    height: 7px;
+    margin: 0 15%;
+    padding: 0;
+}
+.botonStart{
+    margin: 20% 0 0 0;
+}
+.startPomo, .vincNewTask{
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    font-family: 'Baloo Tammudu 2';
+    font-size: 18px;
+    transition: 0.7s;
+    height: 35px;
+}
+.startPomo{
+    background: linear-gradient(90deg, rgba(253,232,205,0.7035189075630253) 0%, rgba(0,145,124,0.6979166666666667) 30%, rgba(2,89,85,0.7) 66%, rgba(67,53,32,0.7) 100%);
+    color: white;
+    text-align: center;
+    transition: 0.7s;
+}
+.vincNewTask{
+    background: rgba(255, 255, 255, 0.534);
+    color: black;
+    text-align: center;
+}
+.vincNewTask:hover{
+    background: rgb(255, 255, 255);
+    transition: 0.7s;
+}
+.startPomo:hover{
+    background: linear-gradient(90deg, rgba(253,232,205,1) 0%, rgba(0,145,124,1) 30%, rgba(2,89,85,1) 66%, rgba(67,53,32,1) 100%);
+    transition: 0.7s;
+}
+.menu{
+    width: 75%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.411);
+    margin: 0 25%;
+}
+.mediaMenu{
+    background: linear-gradient(90deg, rgba(253,232,205,0) 0%, rgba(0,0,0,1) 100%);
+    align-items: center;
+}
+.tab {
+    overflow: hidden;
+    text-align: center;
+}
+.tab button {
+    background-color: inherit;
+    font-family: 'Baloo Tammudu 2';
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 16px;
+    transition: 0.3s;
+}
+.tab button:hover {
+    font-weight: bold;
+}
+.tab button.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: teal;
+    text-decoration-thickness: 3px;
+}
+.tabcontent {
+display: none;
+    padding: 2%;
+    border-top: none;
+    font-size: 20px;
+}
+.inputMedia, .taskName{
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.596);
+    transition: 0.7s;
+    color: black;
+    font-size: 18px;
+    font-family: 'Baloo Tammudu 2';
+}
+.inputMedia:hover, .taskName:hover, .taskDate:hover, .taskPomos:hover{
+    background: white;
+    transition: 0.7s;
+}
+.submitMedia, .addTaskBoton{
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    transition: 0.7s;
+    color: white;
+    font-size: 18px;
+    font-family: 'Baloo Tammudu 2';
+    background: white;
+    background: linear-gradient(90deg, rgba(234,226,182,0.7) 0%, rgba(127,139,82,0.7) 30%, rgba(163,168,71,0.7) 61%, rgba(85,135,118,0.7) 100%);
+}
+.submitMedia:hover,.addTaskBoton:hover{
+    transition: 0.7s;
+    background: linear-gradient(90deg, rgb(234,226,182) 0%, rgb(127,139,82) 30%, rgb(163,168,71) 61%, rgb(85,135,118) 100%);
+}
+.tabsMedia, .tabsToDo {
+    overflow: hidden;
+    text-align: center;
+  }
+  .tabsMedia button, .tabsToDo button {
+    background-color: inherit;
+    font-family: 'Baloo Tammudu 2';
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .tabsMedia button:hover, .tabsToDo button:hover {
+    font-weight: bold;
+  }
+  .tabsMedia button.active, .tabsToDo button.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #433520;
+    text-decoration-thickness: 3px;
+  }
+  .contenTabMedia {
+    display: none;
+    padding: 2%;
+    border-top: none;
+    font-size: 20px;
+  }
+.taskPomos, .taskDate{
+    border-radius: 6px;
+    border: none;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.596);
+    transition: 0.7s;
+    color: black;
+    font-size: 14px;
+    font-family: 'Baloo Tammudu 2';
+    text-align: center;
+}
+.LabelsCortos, .InputsCortos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+}
+.addTaskBoton{
+    background: linear-gradient(90deg, rgba(82,57,6,0.7) 0%, rgba(83,82,4,0.7) 30%, rgba(98,118,12,0.7) 61%, rgba(205,179,12,0.7) 100%);
+    margin: 2% 0 0;
+}
+.addTaskBoton:hover{
+    background: linear-gradient(90deg, rgba(82,57,6,1) 0%, rgba(83,82,4,1) 30%, rgba(98,118,12,1) 61%, rgba(205,179,12,1) 100%);
+}
+.contenToDo{
+    display: none;
+    padding: 2%;
+    border-top: none;
+    font-size: 16px;
+    overflow-y: auto;
+    width: 100%;
+}
+.task{
+    width: 95%;
+    background: rgba(255, 255, 255, 0.507);
+    padding: 1%;
+    margin: 5px 0;
+    box-shadow: 3px 5px 12px black;
+    border-radius: 10px;
+    color: black;
+    line-height: 20px;
+}
+.titleTask{
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+.dataTask{
+    font-size: 16px;
+    text-align: start;
+    margin: 0 15px;
+}
+.gridBotones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0;
+}
+.gridBotones > button{
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    margin: 0 3px;
+    transition: 0.7s;
+    font-family: 'Baloo Tammudu 2';
+}
+.gridBotones > button:hover{
+    background: white;
+    transition: 0.7s;
+}
+.startPomoTask{
+    transition: 0.7s;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgba(6,84,70,0.7) 0%, rgba(25,113,99,0.7) 31%, rgba(21,132,103,0.7) 65%, rgba(250,220,172,0.7) 100%);
+    margin: 5px 0 0;
+    width: 100%;
+    font-family: 'Baloo Tammudu 2';
+}
+.startPomoTask:hover{
+    transition: 0.7s;
+    background: linear-gradient(90deg, rgba(6,84,70,1) 0%, rgba(25,113,99,1) 31%, rgba(21,132,103,1) 65%, rgba(250,220,172,1) 100%);
+}
+.modalContainer {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContainer .modal-content {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 10px solid #197163;
+    width: 60%;
+    color: white;
+}
+
+.modalContainer .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#Tokyo{
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+}
+#Tokyo > h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.descToDo, .avisoLegal{
+    font-size: 14px;
+}
+.minsPomos{
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.527);
+    color: black;
+    font-family: 'Baloo Tammudu 2';
+    transition: 0.7s;
+}
+.minsPomos:hover{
+    background: white;
+    transition: 0.7s;
+}
+.exportToDo{
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Baloo Tammudu 2';
+    background: linear-gradient(90deg, rgba(102,222,147,0.7) 0%, rgba(255,234,201,0.7) 41%, rgba(255,97,109,0.7) 96%, rgba(216,58,86,0.7) 100%);
+    transition: 0.7s;
+}
+.exportToDo:hover{
+    background: linear-gradient(90deg, rgba(102,222,147,1) 0%, rgba(255,234,201,1) 41%, rgba(255,97,109,1) 96%, rgba(216,58,86,1) 100%);
+    transition: 0.7s;
+}
+.gridBotonesMore{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 0;
+}
+.gridBotonesMore > button{
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Baloo Tammudu 2';
+    color: white;
+    transition: 0.7s;
+}
+.changeBackground{
+    background-color: #a3a84786;
+}
+.changeBackground:hover{
+    background-color: #a3a847;
+    transition: 0.7s;
+}
+.samolvher{
+    background: linear-gradient(90deg, rgba(77,8,154,0.6) 0%, rgba(50,62,221,0.6) 100%);
+}
+.samolvher:hover{
+    transition: 0.7s;
+    background: linear-gradient(90deg, rgba(77,8,154,1) 0%, rgba(50,62,221,1) 100%);
+}
+.changesReloj{
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Baloo Tammudu 2';
+    color: white;
+    transition: 0.7s;
+    background: #01937d8a;
+    width: 100%;
+}
+.changesReloj:hover{
+    transition: 0.7s;
+    background: #01937C;
+}
+.activadoBotones{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 0;
+}
+.activadoBotones > div{
+    margin: 0 3px 0 0;
+}
+.activadoBotones > div > button{
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Baloo Tammudu 2';
+    color: white;
+    transition: 0.7s; 
+    
+    width: 100%;
+}
+.activadoBotones > div > button:hover{
+    transition: 0.7s;
+}
+.stopTempo{
+    background: #cdc83386;
+}
+.stopTempo:hover{
+    background: #CDC733;
+}
+.pauseTempo{
+    background: #966b3b8f;
+}
+.pauseTempo:hover{
+    background: #966C3B;
+}
+.taskProcess{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+    margin: 0 15%;
+}
+.taskProcess > h4{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.datosTaskProcess{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 0;
+}
+.datosTaskProcess > p{
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+.taskProcess > p{
+    margin: 0;
+}
