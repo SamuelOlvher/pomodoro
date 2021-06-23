@@ -9,6 +9,10 @@ Este pomodoro está hecho con las tecnologías web base: HTML, CSS y JavaScript 
 </ul>
 Es un pomodoro muy simple, aunque espero que ayude a algunas personas a concentrarse.
 
+## Demo
+Conoce y utiliza el pomodoro aquí:
+https://pomodoro.samuelolvher.com
+
 ## Notas
 
 Esta web-app no almacena ningún dato de l@s usuari@s (ni tampoco genera cookies), por lo cuál al cerrar la pestaña/ventana del navegador se pierden los datos ingresados (para ello las funciones de exportar e importar las tareas).
