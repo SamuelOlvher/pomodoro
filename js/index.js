@@ -104,9 +104,9 @@ function changeMedia(plataforma, urlMedia) {
       break;
     case 'twitch':
       //tratamiento URL
-      urlMedia=urlMedia.slice(22);
+      urlMedia=urlMedia.slice(23);
       urlSeccionado=urlMedia.split('/');
-      if(urlSeccionado ===1){
+      if(urlSeccionado.length == 1){
         urlFull='<iframe src="https://player.twitch.tv/?channel=' + urlSeccionado[0] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>';
       }else{
         urlFull='<iframe src="https://player.twitch.tv/?video=' + urlSeccionado[1] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>'
