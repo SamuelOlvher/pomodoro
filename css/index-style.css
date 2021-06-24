@@ -75,7 +75,7 @@ body{
     margin: 0 25%;
 }
 .mediaMenu{
-    background: linear-gradient(90deg, rgba(253,232,205,0) 0%, rgba(0,0,0,1) 100%);
+    /*background: linear-gradient(90deg, rgba(253,232,205,0) 0%, rgba(0,0,0,1) 100%);*/
     align-items: center;
 }
 .tab {
