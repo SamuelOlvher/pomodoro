@@ -107,7 +107,11 @@ function changeMedia(plataforma, urlMedia) {
       urlMedia=urlMedia.slice(22);
       urlSeccionado=urlMedia.split('/');
       if(urlSeccionado[0] != "videos"){
-        urlFull='<iframe src="https://player.twitch.tv/?channel=' + urlSeccionado[0] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>';
+	if(urlSeccionado[1]){
+	      	urlFull='<iframe src="https://player.twitch.tv/?channel=' + urlSeccionado[1] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>';
+      	}else{
+		urlFull='<iframe src="https://player.twitch.tv/?channel=' + urlSeccionado[0] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>';
+	}
       }else{
         urlFull='<iframe src="https://player.twitch.tv/?video=' + urlSeccionado[1] + '&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>'
       }
