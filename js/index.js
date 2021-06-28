@@ -77,8 +77,10 @@ function tamanioPanels(tamanio="ampliar"){
     switch(tamanio){
         case "ampliado":
             menuPanel=document.getElementById("menuPanel");
+	    contenedor=document.getElementById("contenedor");
             twitch=document.getElementById("Twitch-iframe");
             youtube=document.getElementById("YT-iframe");
+	    contenedor.style.gridTemplateColumns="1fr 50%";
             menuPanel.style.width="100%";
             menuPanel.style.margin="0";
             twitch.height="378";
@@ -90,8 +92,10 @@ function tamanioPanels(tamanio="ampliar"){
         break;
         case "normal":
             menuPanel=document.getElementById("menuPanel");
+	    contenedor=document.getElementById("contenedor");
             twitch=document.getElementById("Twitch-iframe");
             youtube=document.getElementById("YT-iframe");
+	    contenedor.style.gridTemplateColumns="1fr 50%";
             menuPanel.style.width="75%";
             menuPanel.style.margin="0 25%";
             twitch.height="378";
