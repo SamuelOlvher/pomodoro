@@ -11,7 +11,7 @@ function changeFondo(){
 }
 //Variales globales
 todo=[];
-tamanioPanels={
+tamsPanels={
     tamanio: "normal",
     youtube: 315,
     twitch: 378
@@ -83,9 +83,9 @@ function tamanioPanels(tamanio="ampliar"){
             menuPanel.style.margin="0";
             twitch.height="378";
             youtube.height="315";
-            tamanioPanels["tamanio"]="ampliado";
-            tamanioPanels["youtube"]=315;
-            tamanioPanels["twitch"]=378;
+            tamsPanels["tamanio"]="ampliado";
+            tamsPanels["youtube"]=315;
+            tamsPanels["twitch"]=378;
             
         break;
         case "normal":
@@ -96,9 +96,9 @@ function tamanioPanels(tamanio="ampliar"){
             menuPanel.style.margin="0 25%";
             twitch.height="378";
             youtube.height="315";
-            tamanioPanels["tamanio"]="normal";
-            tamanioPanels["youtube"]=315;
-            tamanioPanels["twitch"]=378;
+            tamsPanels["tamanio"]="normal";
+            tamsPanels["youtube"]=315;
+            tamsPanels["twitch"]=378;
         break;
         case "grande":
             menuPanel=document.getElementById("menuPanel");
@@ -110,9 +110,9 @@ function tamanioPanels(tamanio="ampliar"){
             contenedor.style.gridTemplateColumns="1fr 60%";
             twitch.height="450";
             youtube.height="450";
-            tamanioPanels["tamanio"]="grande";
-            tamanioPanels["youtube"]=450;
-            tamanioPanels["twitch"]=450;
+            tamsPanels["tamanio"]="grande";
+            tamsPanels["youtube"]=450;
+            tamsPanels["twitch"]=450;
         break;
         case "cine":
             menuPanel=document.getElementById("menuPanel");
@@ -124,9 +124,9 @@ function tamanioPanels(tamanio="ampliar"){
             contenedor.style.gridTemplateColumns="1fr 75%";
             twitch.height="550";
             youtube.height="550";
-            tamanioPanels["tamanio"]="cine";
-            tamanioPanels["youtube"]=550;
-            tamanioPanels["twitch"]=550;
+            tamsPanels["tamanio"]="cine";
+            tamsPanels["youtube"]=550;
+            tamsPanels["twitch"]=550;
         break;
     }
 }
@@ -135,7 +135,7 @@ if(screen.width > 719){
     esqueleto=`<p>Cambiar Tamaño de los paneles:</p>
     <select id="tamPanels">
             <option value="normal">Normal</option>
-            <option value="apliado">Ampliado</option>
+            <option value="ampliado">Ampliado</option>
             <option value="grande">Grande</option>
             <option value="cine">Modo Cine</option>
         </select>
@@ -159,7 +159,7 @@ function changeMedia(plataforma, urlMedia) {
       }
       console.log(IDVideo);
       //incrustacion y cambio de video
-      urlFull='<iframe id="YT-iframe" width="100%" height="' + tamanioPanels["youtube"] + '" src="https://www.youtube.com/embed/' + IDVideo + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      urlFull='<iframe id="YT-iframe" width="100%" height="' + tamsPanels["youtube"] + '" src="https://www.youtube.com/embed/' + IDVideo + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
       console.log(urlFull);
       divYT=document.getElementById('youtubeSuperior');
       divYT.innerHTML=urlFull;
@@ -182,13 +182,13 @@ function changeMedia(plataforma, urlMedia) {
       urlSeccionado=urlMedia.split('/');
       if(urlSeccionado[0] != "videos"){
           if(urlSeccionado[1]){
-              urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?channel=' + urlSeccionado[1] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamanioPanels["twitch"] + '" width="100%"></iframe>';
+              urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?channel=' + urlSeccionado[1] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamsPanels["twitch"] + '" width="100%"></iframe>';
           }else{
-              urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?channel=' + urlSeccionado[0] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamanioPanels["twitch"] + '" width="100%"></iframe>';
+              urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?channel=' + urlSeccionado[0] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamsPanels["twitch"] + '" width="100%"></iframe>';
           }
         
       }else{
-        urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?video=' + urlSeccionado[1] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamanioPanels["twitch"] + '" width="100%"></iframe>'
+        urlFull='<iframe id="Twitch-iframe" src="https://player.twitch.tv/?video=' + urlSeccionado[1] + '&parent=pomodoro.samuelolvher.com" frameborder="0" allowfullscreen="true" scrolling="no" height="' + tamsPanels["twitch"] + '" width="100%"></iframe>'
       }
       console.log(urlSeccionado);
       console.log(urlFull);
